@@ -2,30 +2,25 @@ package utility;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.After;
+import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.ElementLocatorFactory;
 
 public class Hooks {
 
-    public static BrowserDriver driver;
-
-    @FindBy(xpath = "//button[@id='details-button']")
-    static WebElement advancedButton;
-
-    @FindBy(xpath = "//a[@id='proceed-link']")
-    static WebElement unsafeButton;
+    public BrowserDriver driver;
 
     @Before
     public void setup(){
         driver = new BrowserDriver();
-        advancedButton.click();
-        unsafeButton.click();
     }
 
     @After
     public void tearDown(){
-        driver.close();
+        //driver.close();
     }
 
 }

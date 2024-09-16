@@ -94,6 +94,9 @@ public class Users {
     @FindBy(xpath = "//input[@name = 'OU_']")
     WebElement adOUsToImport;
 
+    @FindBy(xpath = "//div[@id = 'importFromADUsersClose']//em[contains(text() , 'Close')]")
+    WebElement adUserImportCloseButton;
+
     @FindBy(xpath = "//em[text() = 'Import']")
     WebElement userImportButton;
 
@@ -235,7 +238,7 @@ public class Users {
             Thread.sleep(1500);
             userImportButton.click();
             Thread.sleep(3000);
-            userCloseButton.click();
+            adUserImportCloseButton.click();
         }
     }
 
