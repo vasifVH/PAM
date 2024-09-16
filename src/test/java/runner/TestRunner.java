@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions (
-        features = "D:/Personal/Selenium/PamNew/src/test/java/features/adduser.feature",
+        features = "D:/Personal/Selenium/PAM_NEW_PROJECT/source/PAM/src/test/java/features/adduser.feature",
         glue = {"StepDefinitions", "utility"},
         plugin = {"pretty", "html:target/cucumber-html-report" , "json:cucumber.json"}
 

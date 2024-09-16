@@ -3,8 +3,10 @@ Feature: Adding user to the application
     Given User is logged in with username "<username>" and password "<password>"
     When User is added manually
     When User is imported from AD
-    Then User is logged in successfully
+    When User "<userNames>" "<userGroups>" "<groupName>"is imported from ENTRAID
+    When Resources are imported manually
+    Then User is logged out
 
     Examples:
-    | username | password |
-    | admin    | Test@123 |
+    | username | password | userNames | userGroups |  groupName |
+    | admin    | Test@123 |           |          |  JeraldGroup |

@@ -4,6 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.LoginPage;
+import pages.Resources;
 import pages.Users;
 import utility.BrowserDriver;
 
@@ -11,6 +12,7 @@ public class Steps{
 
     LoginPage loginPage = new LoginPage(BrowserDriver.driver);
     Users users = new Users(BrowserDriver.driver);
+    Resources resources = new Resources(BrowserDriver.driver);
 
     @Given("User is logged in with username {string} and password {string}")
     public void user_is_logged_in_with_username_and_password(String username, String password) throws InterruptedException {
@@ -33,4 +35,20 @@ public class Steps{
         throw new io.cucumber.java.PendingException();
     }
 
+    @When("User {string} {string} {string}is imported from ENTRAID")
+    public void userIsImportedFromENTRAID(String userNames, String userGroups, String groupName) throws InterruptedException {
+        users.addUserFromENTRAID(userNames,userGroups,groupName);
+        String out = users.addUserFromLDAP();
+        System.out.println(out);
+    }
+
+    @Then("User is logged out")
+    public void userIsLoggedOut() throws InterruptedException {
+        loginPage.webBrowserLogout();
+    }
+
+    @When("Resources are imported manually")
+    public void resourcesAreImportedManually() {
+        //resources.addResourceManually();
+    }
 }
