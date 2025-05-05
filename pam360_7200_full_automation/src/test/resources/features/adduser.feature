@@ -22,7 +22,10 @@ Feature: Adding user to the application
     And Logout from the current user
     When Login with "<username>" and "<password>"
     When password checkout and checkin
+    Given Add "windows" Resource in bulk
+    Given Add Resource in bulk
+    Given Create a Resource with an Account
 
     Examples:
       | username  | password  | timing  | minutes | Approval  | approval minutes  |
-      | user  | Vbnm@123  | Later | 30  | approve | 20  |
+      | user1  | Test@123  | Later | 30  | approve | 20  |

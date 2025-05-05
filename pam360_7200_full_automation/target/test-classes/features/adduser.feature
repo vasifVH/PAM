@@ -10,10 +10,10 @@ Feature: Adding user to the application
 
 
   Scenario Outline: Validate the access control configuring
-    #Given Create the windows resource
-    #When Configure Access control for resource in bulk
-    #And Share resource to "<username>"
-    #And Logout from the current user
+    Given Create the windows resource
+    When Configure Access control for resource in bulk
+    And Share resource to "<username>"
+    And Logout from the current user
     When Login with "<username>" and "<password>"
     When Access control request by user at "<timing>" and <minutes>
     And Logout from the current user
@@ -22,7 +22,10 @@ Feature: Adding user to the application
     And Logout from the current user
     When Login with "<username>" and "<password>"
     When password checkout and checkin
+    Given Add "windows" Resource in bulk
+    Given Add Resource in bulk
+    Given Create a Resource with an Account
 
     Examples:
       | username  | password  | timing  | minutes | Approval  | approval minutes  |
-      | user  | Vbnm@123  | Later | 30  | approve | 20  |
+      | user1  | Test@123  | Later | 30  | approve | 20  |

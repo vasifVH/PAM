@@ -1,0 +1,47 @@
+Resources
+Resource name,DNS name,Resource type,Domain Name
+-Windows Res1-,WindowsRes1,Windows,domain1
+-Windows Res2-,WindowsRes2,Windows,
+-Windows Res3-,WindowsRes3,Windows,domain2
+-Windows Res4-,WindowsRes4,Windows,
+-Linux Res1-,LinuxRes1,Linux,
+-Linux Res2-,LinuxRes2,Linux,
+-Linux Res3-,LinuxRes3,Linux,
+-Linux Res4-,LinuxRes4,Linux,
+section end
+
+Accounts
+Resource name,Account name,generate/enter,Account password
+-res1-,Windows,acc2,enter,Test@123
+-res2-,Windows,acc2,generate,
+-res2-,Windows,acc3,enter,Test@123
+-res2-,Linux,acc2,enter,Test@123
+section end
+
+User Data
+first name,last name,username,role,mail,password setup,password
+pass,user1,passuser1,Password User,user@gmail.com,Username as a Password,
+pass,user2,passuser2,Password User,user2@gmail.com,Username as a Password,
+pass,user3,passuser3,Password User,user3@gmail.com,Username as a Password,
+pass,user4,passuser4,Password User,user4@gmail.com,Username as a Password,
+approval,admin1,approvaladmin1,Administrator,admin1@1gmail.com,Username as a Password,
+approval,admin2,approvaladmin2,Privileged Administrator,admin2@1gmail.com,Username as a Password,
+section end
+
+Resource with Account Details
+Resource name,DNS name,Resource type,Account name,generate/enter,Account password
+-res1-,res1,Windows,acc1,generate,
+-res2-,res2,Windows,acc1,enter,Test@123
+-res3-,res3,Linux,acc1,enter,Pass@123
+-res4-,res4,Linux,acc1,generate,
+section end
+
+Configure Access Control
+Resource Name,Search Name,Approval Admin Users,Approval Admin Groups,Exclude Users,Exclude Groups,Is Multiple Admin,No. of Approval Admins,Is Reason,Is Remind, Reminder Time,Is Grace Time,Grace Time,Auto Checkin,Checkin Time,Request time output,checkout time out,is Reset,
+-res1-,,approval admin1 (MSP),,pass user4 (MSP),,false,,true,true,4,true,10,false,,1,,true
+-res2-,,approval admin2 (MSP);approval admin1 (MSP),,pass user2 (MSP),,true,2,false,false,4,true,10,false,,1,20,true
+-res3-,,approval admin2 (MSP),,pass user3 (MSP),,false,,true,true,4,false,,true,4,,40,false
+-res4-,,approval admin1 (MSP),,pass user3 (MSP),,false,,true,true,4,false,,true,4,,40,false
+section end
+
+end

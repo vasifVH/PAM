@@ -1,0 +1,149 @@
+{
+  "TestCase1": [
+    {
+      "label": "Department",
+      "criteria": "Equals",
+      "criteriaValue": "windowsergertg",
+      "operator": "AND",
+      "Subset": [
+        {
+          "set1": [
+            {
+              "label": "Department",
+              "criteria": "Equals",
+              "criteriaValue": "Linuxsdfgre"
+            },
+            {
+              "operator": "OR",
+              "label": "Department",
+              "criteria": "Equals",
+              "criteriaValue": "windowsgyugy",
+              "Subset": [
+                {
+                  "set1": [
+                    {
+                      "label": "Department",
+                      "criteria": "Equals",
+                      "criteriaValue": "Linuxfgh4rt"
+                    },
+                    {
+                      "operator": "AND",
+                      "label": "Department",
+                      "criteria": "Equals",
+                      "criteriaValue": "windowsgnjthy"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "operator": "AND",
+              "label": "Location",
+              "criteria": "Equals",
+              "criteriaValue": "wind",
+              "Subset": [
+                {
+                  "set2": [
+                    {
+                      "label": "Department",
+                      "criteria": "Equals",
+                      "criteriaValue": "Linuxfgh4rt"
+                    },
+                    {
+                      "operator": "AND",
+                      "label": "Department",
+                      "criteria": "Equals",
+                      "criteriaValue": "windowsgnjthy"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "set2": [
+            {
+              "label": "Department",
+              "criteria": "Equals",
+              "criteriaValue": "Lin"
+            },
+            {
+              "Subset": [
+                {
+                  "set1": [
+                    {
+                      "label": "Department",
+                      "criteria": "Equals",
+                      "criteriaValue": "Linuxfrtuyi"
+                    },
+                    {
+                      "operator": "AND",
+                      "label": "Department",
+                      "criteria": "Equals",
+                      "criteriaValue": "windowiouiou"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "operator": "AND",
+              "label": "Location",
+              "criteria": "Equals",
+              "criteriaValue": "windlkhnmgb",
+              "Subset": [
+                {
+                  "set2": [
+                    {
+                      "label": "Department",
+                      "criteria": "Equals",
+                      "criteriaValue": "Linuxfwertery"
+                    },
+                    {
+                      "operator": "AND",
+                      "label": "Department",
+                      "criteria": "Equals",
+                      "criteriaValue": "windowssdghyjkui"
+                    }
+                  ],
+                  "set3": [
+                    {
+                      "label": "Department",
+                      "criteria": "Equals",
+                      "criteriaValue": "Linuxfrjiohuyi"
+                    },
+                    {
+                      "operator": "AND",
+                      "label": "Department",
+                      "criteria": "Equals",
+                      "criteriaValue": "windiou"
+                    }
+                  ]
+
+                }
+              ]
+            }
+          ],
+          "set3": [
+            {
+              "label": "Department",
+              "criteria": "Equals",
+              "criteriaValue": "Linuxr@#%^&*;[]{}//.,.;/\"grth"
+            },
+            {
+              "operator": "AND",
+              "label": "Department",
+              "criteria": "Equals",
+              "criteriaValue": "windowscbdgfb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+        "operator": "AND",
+        "label": "Department",
+        "criteria": "Equals",
+        "criteriaValue": "Linuxewfrwer"
+    }
+  ]
+}

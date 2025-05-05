@@ -4,26 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="421f1a0b-b35d-4d1e-a01b-8c28a1133ceb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/Configuration/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/DriverManager/driverManagerClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/Hooks/hooks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/StepDefinitions/Steps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/StepDefinitions/rdp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/basePackage/baseClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/pages/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/pages/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/pages/resourcesTab.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/adduser.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/rdp.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/runnerClass/testRunner.java" afterDir="false" />
+    <list default="true" id="421f1a0b-b35d-4d1e-a01b-8c28a1133ceb" name="Changes" comment="Added access control changes">
+      <changelist_data name="ragul-scorch" email="ragulmathi19@gmail.com" automatic="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Hooks/CSVDataReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/Groups.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/CSVFiles/Data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/JSON/dynamicGroup.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Sanity.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/accessControl.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/editResource.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/macagent.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/userAuthentication.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/CSVFiles/Data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/Hooks/CSVDataReader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/JSON/dynamicGroup.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/Pages/Groups.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/Sanity.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/accessControl.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/features/userAuthentication.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BasePackage/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasePackage/BaseClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Configuration/Config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Configuration/Config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Hooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Hooks/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/Resources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/Resources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RunnerClass/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RunnerClass/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinitions/Steps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinitions/Steps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/adduser.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/adduser.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber-html-report" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-html-report" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BasePackage/BaseClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/BasePackage/BaseClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Hooks/Hooks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Hooks/Hooks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/Resources.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/Resources.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Pages/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Pages/Users.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RunnerClass/TestRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RunnerClass/TestRunner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/StepDefinitions/Steps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/StepDefinitions/Steps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/features/adduser.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/adduser.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +64,25 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="ragul-scorch &lt;ragulmathi19@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Ragul-scorch&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/vasifVH/PAM.git&quot;,
+    &quot;accountId&quot;: &quot;752bc7ea-1384-46b3-8243-80e75198b72e&quot;
+  }
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -47,34 +90,36 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2lc0gYAodYxsmSz0wvoMqD5I9c4" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Cucumber Java.Feature: adduser.executor": "Run",
-    "Cucumber Java.Feature: rdp.executor": "Run",
-    "Cucumber Java.Scenario: Validate the rdp session opening.executor": "Run",
-    "Cucumber Java.Scenario: Validate user is imported and logged in.executor": "Debug",
-    "JUnit.testRunner.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/IntelliJ/OwnBranch/PAM",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cucumber Java.Feature: adduser.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: rdp.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Validate the rdp session opening.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Validate user is imported and logged in.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.TestRunner.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.testRunner.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;PAM__Resource__Group__Branch&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Selenium/PAM_Resource_Group_Branch/Source/PAM/pam360_7200_full_automation&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IntelliJ\PamProject\pamautomation\src\test\resources_" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.testRunner">
+  <component name="RunManager" selected="JUnit.TestRunner">
     <configuration name="Feature: adduser" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/adduser.feature" />
@@ -149,7 +194,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="pamautomation" />
       <extension name="coverage">
         <pattern>
@@ -157,16 +202,24 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test.runnerClass" />
-      <option name="MAIN_CLASS_NAME" value="test.runnerClass.testRunner" />
+      <option name="PACKAGE_NAME" value="RunnerClass" />
+      <option name="MAIN_CLASS_NAME" value="RunnerClass.TestRunner" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Cucumber Java.Feature: adduser" />
+      <item itemvalue="Cucumber Java.Feature: rdp" />
+      <item itemvalue="Cucumber Java.Scenario: Validate the rdp session opening" />
+      <item itemvalue="Cucumber Java.Scenario: Validate user is imported and logged in" />
+      <item itemvalue="JUnit.TestRunner" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.testRunner" />
+        <item itemvalue="JUnit.TestRunner" />
         <item itemvalue="Cucumber Java.Feature: rdp" />
         <item itemvalue="Cucumber Java.Scenario: Validate user is imported and logged in" />
         <item itemvalue="Cucumber Java.Scenario: Validate the rdp session opening" />
@@ -185,13 +238,31 @@
     </task>
     <servers />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added access control changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added access control changes" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/pages/LoginPage.java</url>
           <line>33</line>
-          <properties class="test.pages.LoginPage" method="webBrowserLogin">
+          <properties class="test.pages.LoginPage">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -200,7 +271,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/pages/LoginPage.java</url>
           <line>28</line>
-          <properties class="test.pages.LoginPage" method="&lt;init&gt;">
+          <properties class="test.pages.LoginPage">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -209,7 +280,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/Hooks/hooks.java</url>
           <line>25</line>
-          <properties class="test.Hooks.hooks" method="loadPropertiesFile">
+          <properties class="test.Hooks.hooks">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>

@@ -3,17 +3,12 @@ package BasePackage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.*;
 
 import java.security.SecureRandom;
 import java.time.Duration;
 import java.util.List;
 import java.util.NoSuchElementException;
-
-import static Hooks.Hooks.prop;
 
 public class BaseClass {
     int count;
@@ -23,6 +18,7 @@ public class BaseClass {
     public BaseClass(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(this.driver, this);
+        this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
     public WebElement multipleElements(List<WebElement> webElementsList, String option){
@@ -37,6 +33,8 @@ public class BaseClass {
 
     public WebElement multipleElementsWithoutWait(List<WebElement> webElementsList, String option){
         for(WebElement element : webElementsList){
+            //System.out.println(element.getText());
+            //System.out.println("sas");
             if(element.getText().contains(option) )
                 return element;
         }
@@ -55,10 +53,79 @@ public class BaseClass {
         return count;
     }
 
-    public boolean waitForElement(WebElement element , int seconds) {
+    public boolean waitForElementToBeVisible(WebElement element , int seconds) {
+        try {
+            wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
+            wait.until(ExpectedConditions.visibilityOf(element));
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean waitForElementsAttributeToChange(WebElement element, String attribute, String value) {
+        try {
+            wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+            wait.until(ExpectedConditions.attributeToBe(element, attribute, value));
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void waitForURL(String url , int seconds) {
         wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
-        wait.until(ExpectedConditions.visibilityOf(element));
-        return element.isDisplayed();
+        wait.until(ExpectedConditions.urlContains(url));
+    }
+
+    public void waitForURLs(String url1, String url2, int seconds) {
+        wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
+        wait.until(ExpectedConditions.or(
+                ExpectedConditions.urlContains(url1),
+                ExpectedConditions.urlContains(url2)
+        ));
+    }
+
+    public void dropDownSelectText(WebElement element, String option) {
+        if (element == null) {
+            System.out.println("Dropdown element is null.");
+            return;
+        }
+
+        if (option == null || option.trim().isEmpty()) {
+            System.out.println("Option value is null or empty.");
+            return;
+        }
+
+        try {
+            Select select = new Select(element);
+            select.selectByVisibleText(option);
+        } catch (NoSuchElementException e) {
+            System.out.println("Option '" + option + "' not found in dropdown.");
+        } catch (Exception e) {
+            System.out.println("Error selecting value from dropdown: " + e.getMessage());
+        }
+    }
+
+    public void dropDownSelectValue(WebElement element, String option) {
+        if (element == null) {
+            System.out.println("Dropdown element is null.");
+            return;
+        }
+
+        if (option == null || option.trim().isEmpty()) {
+            System.out.println("Option value is null or empty.");
+            return;
+        }
+
+        try {
+            Select select = new Select(element);
+            select.selectByValue(option);
+        } catch (NoSuchElementException e) {
+            System.out.println("Option '" + option + "' not found in dropdown.");
+        } catch (Exception e) {
+            System.out.println("Error selecting value from dropdown: " + e.getMessage());
+        }
     }
 
     public void waitForElements(List<WebElement> element , int seconds) {
@@ -92,15 +159,8 @@ public class BaseClass {
         return result.toString();
     }
 
-    public boolean isElementPresent(WebElement element, int seconds) {
-        try {
-            wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
-            wait.until(ExpectedConditions.visibilityOf(element));
-            return true; // Element is found
-        } catch (Exception e) {
-            System.out.println(e.toString());
-            return false; // Timeout happened and element was not found
-        }
+    public boolean isElementsPresent(List<WebElement> element) {
+        return !element.isEmpty();
     }
 
     public void clickWithfluentWait(WebElement element,int minutes, int pollingSeconds){
@@ -110,6 +170,20 @@ public class BaseClass {
                 .ignoring(NoSuchElementException.class);
         wait.until(driver -> element).click();
     }
+    public void setCheckbox(WebElement checkboxElement, boolean shouldBeChecked) {
+        if (checkboxElement != null && checkboxElement.isDisplayed()) {
+            boolean isChecked = checkboxElement.isSelected();
+
+            if (shouldBeChecked && !isChecked) {
+                checkboxElement.click(); // Select if not already selected
+            } else if (!shouldBeChecked && isChecked) {
+                checkboxElement.click(); // Deselect if already selected
+            }
+        } else {
+            System.out.println("Checkbox not found or not visible.");
+        }
+    }
+
 }
 
 
