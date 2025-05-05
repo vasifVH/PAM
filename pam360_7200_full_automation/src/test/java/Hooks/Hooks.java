@@ -5,6 +5,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.FileInputStream;
@@ -18,14 +19,14 @@ public class Hooks {
 
    public static Properties prop;
     public  FileInputStream fis;
-    public static String Browser;
+    public static String browser;
     public static WebDriver driver;
 
   @Before (order = 0)
     public void loadPropertiesFile() {
         prop=new Properties();
         try {
-            fis=new FileInputStream("D:/Personal/Selenium/PAM_VASIF/source/PAM/pam360_7200_full_automation/src/test/java/Configuration/Config.properties");
+            fis=new FileInputStream("./src/test/java/Configuration/Config.properties");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -34,28 +35,30 @@ public class Hooks {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        //Drivers.getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-        Browser=prop.getProperty("browser");
-
-
+        browser=prop.getProperty("browser");
     }
 
     @Before(order = 1)
    public static void launchBrowser() {
-      if(Browser.equals("chrome")) {
-          WebDriverManager.chromedriver().setup();
-          ChromeOptions options = new ChromeOptions();
-          options.setAcceptInsecureCerts(true);  // Accept insecure certificates
-          options.addArguments("--ignore-certificate-errors");
-          driver=new ChromeDriver(options);
-          //url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
-      } else {
-          WebDriverManager.firefoxdriver().setup();
-          driver=new FirefoxDriver();
+      switch(browser.toLowerCase()){
+          case "chrome":
+              WebDriverManager.chromedriver().setup();
+              ChromeOptions options = new ChromeOptions();
+              options.setAcceptInsecureCerts(true);  // Accept insecure certificates
+              options.addArguments("--ignore-certificate-errors");
+              driver=new ChromeDriver(options);
+              break;
+          case "firefox":
+              WebDriverManager.firefoxdriver().setup(); // Set up FirefoxDriver
+              driver = new FirefoxDriver();
+              break;
+          case "edge":
+              WebDriverManager.edgedriver().setup(); // Set up EdgeDriver
+              driver = new EdgeDriver();
+              break;
+          default:
+              throw new IllegalArgumentException("Unsupported browser: " + browser);
       }
-
 
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(30,TimeUnit.SECONDS);
